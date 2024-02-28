@@ -14,6 +14,7 @@ ClapTrap::ClapTrap(const ClapTrap& other) : _name(other._name), _hp(other._hp), 
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 {
+	std::cout << "assignment operator called" << std::endl;
 	this->_hp = other._hp;
 	this->_ep = other._ep;
 	this->_ad = other._ad;
