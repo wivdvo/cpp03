@@ -5,6 +5,10 @@ SRCS =	main.cpp \
 		ScavTrap.cpp \
 		FragTrap.cpp
 
+HEADERS =	ClapTrap.hpp \
+			FragTrap.hpp \
+			ScavTrap.hpp
+
 OBJS = $(SRCS:.cpp=.o)
 
 CC = c++
@@ -15,7 +19,7 @@ RM = rm -fr
 
 all: $(NAME)
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJS) $(HEADERS)
 				$(CC) $(OBJS) $(CFLAGS) -o $(NAME)
 
 %.o: %.cpp
