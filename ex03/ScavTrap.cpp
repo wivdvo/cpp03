@@ -3,6 +3,9 @@
 ScavTrap::ScavTrap(void) : ClapTrap()
 {
 	std::cout << "scav default constructor called" << std::endl;
+	this->_hp = 100;
+	this->_ep = 50;
+	this->_ad = 20;
 }
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
@@ -11,6 +14,9 @@ ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 	this->_hp = 100;
 	this->_ep = 50;
 	this->_ad = 20;
+	HP = 100;
+	EP = 50;
+	AD = 20;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
@@ -48,7 +54,7 @@ void ScavTrap::attack(const std::string& target)
 		std::cout << "cant attack, no energy" << std::endl;
 		return;
 	}
-	std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _ad << " points of damage!" << std::endl;
+	std::cout << "ScavTrap " << this->_name << " attacks " << target << ", causing " << _ad << " points of damage!" << std::endl;
 	_ep--;
 }
 

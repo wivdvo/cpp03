@@ -33,5 +33,6 @@ int main()
 
 	DiamondTrap Ildiko("Ildiko");
 	Ildiko.whoAmI();
+	Ildiko.attack("Artem");
 
 }

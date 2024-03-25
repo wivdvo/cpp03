@@ -1,18 +1,20 @@
 #include "DiamondTrap.hpp"
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include <ostream>
 
-DiamondTrap::DiamondTrap(void) : ClapTrap("_clap_name")
+DiamondTrap::DiamondTrap(void) : ClapTrap("_clap_name"), FragTrap("_clap_name"), ScavTrap("_clap_name")
 {
 	std::cout << "diamond constructor" <<std::endl;
 }
 
-DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
 {
     std::cout << "diamond name constructor" << std::endl;
     this->_name = name;
-    this->_hp = FragTrap::_hp;
-    this->_ep = ScavTrap::_ep;
-    this->_ad = FragTrap::_ad;
+    this->_hp = FragTrap::HP;
+    this->_ep = ScavTrap::EP;
+    this->_ad = FragTrap::AD;
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& other)

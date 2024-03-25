@@ -15,4 +15,9 @@ class ScavTrap : virtual public ClapTrap
 
 		void guardGate(void);
 		void attack(const std::string& target);
+
+	protected:
+		int HP;
+		int AD;
+		int EP;
 };

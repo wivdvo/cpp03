@@ -15,4 +15,10 @@ class FragTrap : virtual public ClapTrap
 
 		void highFivesGuys(void);
 		void attack(const std::string& target);
+	
+	protected:
+		int HP;
+		int AD;
+		int EP;
+
 };
